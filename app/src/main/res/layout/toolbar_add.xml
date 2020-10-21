@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    android:id="@+id/toolbar_add"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/colorPrimary"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_back"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:id="@+id/tv_toolbar_add"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="15dp"
+            android:gravity="center"
+            android:text="Toolbar"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_toEndOf="@id/img_back"/>
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="20dp"
+            android:text="SAVE"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"/>
+
+<!--        <ImageView-->
+<!--            android:id="@+id/img_save"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginHorizontal="15dp"-->
+<!--            android:src="@drawable/ic_checklist"-->
+<!--            android:layout_alignParentEnd="true" />-->
+
+    </RelativeLayout>
+
+</androidx.appcompat.widget.Toolbar>

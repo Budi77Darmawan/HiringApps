@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ProfileFragment">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar7"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_tittle_toolbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="Profile"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:layout_centerInParent="true"
+                        tools:ignore="RtlSymmetry" />
+
+                    <ImageView
+                        android:id="@+id/img_menu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="15dp"
+                        android:src="@drawable/ic_burger"
+                        android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="ContentDescription">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@color/colorPrimary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_profil"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/profile"
+                        app:civ_border_color="@color/colorPrimaryDark"
+                        app:civ_border_width="1dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/web_github"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="15dp"
+                        android:paddingVertical="5dp"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:background="@drawable/shapegithub"
+                        android:text="GitHub"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:drawableStart="@drawable/ic_github_logo"
+                        android:drawablePadding="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view"/>
+
+                    <TextView
+                        android:id="@+id/web_linkedin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="15dp"
+                        android:paddingVertical="5dp"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:background="@drawable/shapelinkedin"
+                        android:text="LinkedIn"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:drawableStart="@drawable/ic_linkedin"
+                        android:drawablePadding="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/web_github"/>
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Nama Lengkap"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/img_profil"
+                        app:layout_constraintTop_toBottomOf="@id/img_profil" />
+
+                    <TextView
+                        android:id="@+id/tv_skill"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Keahlian"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="@id/img_profil"
+                        app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv_exp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_skill">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.4dp"
+                                android:background="#c0c0c0"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tv_exp" />
+
+                            <TextView
+                                android:id="@+id/tv_exp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:padding="10dp"
+                                android:text="Pengalaman Kerja"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/add_exp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:src="@drawable/ic_add"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/img_empty"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/ic_maintenance"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tv_exp" />
+
+                            <TextView
+                                android:id="@+id/tv_empty"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tidak ada pengalaman kerja"
+                                app:layout_constraintBottom_toBottomOf="@id/img_empty"
+                                app:layout_constraintEnd_toEndOf="@id/img_empty"
+                                app:layout_constraintStart_toStartOf="@id/img_empty" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv_training"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/cv_exp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.4dp"
+                                android:background="#c0c0c0"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tv_training" />
+
+                            <TextView
+                                android:id="@+id/tv_training"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:padding="10dp"
+                                android:text="Pelatihan"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/add_training"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:src="@drawable/ic_add"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/img_empty2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/ic_maintenance"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tv_training" />
+
+                            <TextView
+                                android:id="@+id/tv_empty2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tidak ada pelatihan"
+                                app:layout_constraintBottom_toBottomOf="@id/img_empty2"
+                                app:layout_constraintEnd_toEndOf="@id/img_empty2"
+                                app:layout_constraintStart_toStartOf="@id/img_empty2" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv_education"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/cv_training">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.4dp"
+                                android:background="#c0c0c0"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tv_education" />
+
+                            <TextView
+                                android:id="@+id/tv_education"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:padding="10dp"
+                                android:text="Pendidikan"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/add_education"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:src="@drawable/ic_add"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/img_empty3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/ic_maintenance"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tv_education" />
+
+                            <TextView
+                                android:id="@+id/tv_empty3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tidak ada riwayat pendidikan"
+                                app:layout_constraintBottom_toBottomOf="@id/img_empty3"
+                                app:layout_constraintEnd_toEndOf="@id/img_empty3"
+                                app:layout_constraintStart_toStartOf="@id/img_empty3" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv_skill"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/cv_education">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.4dp"
+                                android:background="#c0c0c0"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tv_skill2" />
+
+                            <TextView
+                                android:id="@+id/tv_skill2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:padding="10dp"
+                                android:text="Keahlian"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/add_skill"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:src="@drawable/ic_edit"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tv_empty4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="20dp"
+                                android:text="Tidak ada data keahlian"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tv_skill2" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:background="@color/white"
+            android:fitsSystemWindows="true"
+            app:headerLayout="@layout/header"
+            app:menu="@menu/drawer_menu" />
+    </androidx.drawerlayout.widget.DrawerLayout>
+</layout>

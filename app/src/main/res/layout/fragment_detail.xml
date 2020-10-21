@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".home.DetailFragment">
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="About me"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="About me"
+            app:layout_constraintEnd_toEndOf="@id/desc"
+            app:layout_constraintStart_toStartOf="@id/desc"
+            app:layout_constraintTop_toBottomOf="@id/desc" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="0dp"
+            android:layout_height="0.6dp"
+            android:layout_marginTop="15dp"
+            android:background="#c0c0c0"
+            app:layout_constraintEnd_toEndOf="@id/desc"
+            app:layout_constraintStart_toStartOf="@id/desc"
+            app:layout_constraintTop_toBottomOf="@id/tv_desc" />
+
+        <TextView
+            android:id="@+id/skill"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Skill"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/desc"
+            app:layout_constraintStart_toStartOf="@id/desc"
+            app:layout_constraintTop_toBottomOf="@id/view1" />
+
+        <TextView
+            android:id="@+id/tv_skill"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="KOTLIN"
+            app:layout_constraintEnd_toEndOf="@id/desc"
+            app:layout_constraintStart_toStartOf="@id/desc"
+            app:layout_constraintTop_toBottomOf="@id/skill" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="0dp"
+            android:layout_height="0.6dp"
+            android:layout_marginTop="15dp"
+            android:background="#c0c0c0"
+            app:layout_constraintEnd_toEndOf="@id/desc"
+            app:layout_constraintStart_toStartOf="@id/desc"
+            app:layout_constraintTop_toBottomOf="@id/tv_skill" />
+
+        <TextView
+            android:id="@+id/contact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Contact"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/desc"
+            app:layout_constraintStart_toStartOf="@id/desc"
+            app:layout_constraintTop_toBottomOf="@id/view2" />
+
+        <TextView
+            android:id="@+id/tv_numberphone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:text="Number Phone"
+            app:drawableStartCompat="@drawable/ic_call"
+            app:layout_constraintEnd_toEndOf="@id/desc"
+            app:layout_constraintStart_toStartOf="@id/desc"
+            app:layout_constraintTop_toBottomOf="@id/contact" />
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:text="Email"
+            app:drawableStartCompat="@drawable/ic_email"
+            app:layout_constraintEnd_toEndOf="@id/desc"
+            app:layout_constraintStart_toStartOf="@id/desc"
+            app:layout_constraintTop_toBottomOf="@id/tv_numberphone" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0.6dp"
+            android:layout_marginTop="15dp"
+            android:background="#c0c0c0"
+            app:layout_constraintEnd_toEndOf="@id/desc"
+            app:layout_constraintStart_toStartOf="@id/desc"
+            app:layout_constraintTop_toBottomOf="@id/tv_email" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

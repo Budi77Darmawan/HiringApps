@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ProfileFragment">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar7"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_tittle_toolbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="Profile"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:layout_centerInParent="true"
+                        tools:ignore="RtlSymmetry" />
+
+                    <ImageView
+                        android:id="@+id/img_menu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="15dp"
+                        android:src="@drawable/ic_burger"
+                        android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="ContentDescription">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@color/colorPrimary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_profil"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/personprofile"
+                        app:civ_border_color="@color/black"
+                        app:civ_border_width="1dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="Nama Lengkap"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/img_profil"
+                        app:layout_constraintStart_toStartOf="@id/img_profil"
+                        app:layout_constraintTop_toBottomOf="@id/img_profil" />
+
+                    <TextView
+                        android:id="@+id/tv_nameCompany"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Posisi • Company Name"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toBottomOf="@id/tv_name"
+                        app:layout_constraintStart_toStartOf="@id/img_profil"
+                        app:layout_constraintEnd_toEndOf="@id/img_profil"/>
+
+                    <TextView
+                        android:id="@+id/tv_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:drawableStart="@drawable/ic_location"
+                        android:drawablePadding="5dp"
+                        android:text="Address Company"
+                        android:textStyle="italic"
+                        android:textSize="15sp"
+                        app:layout_constraintTop_toBottomOf="@id/tv_nameCompany"
+                        app:layout_constraintStart_toStartOf="@id/img_profil"
+                        app:layout_constraintEnd_toEndOf="@id/img_profil"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.4dp"
+                        android:background="#c0c0c0"
+                        android:layout_marginTop="15dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_city" />
+
+                    <TextView
+                        android:id="@+id/tv_descCompany"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:paddingHorizontal="30dp"
+                        android:gravity="center"
+                        android:text="Description Company"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toBottomOf="@id/tv_city"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.4dp"
+                        android:background="#c0c0c0"
+                        android:layout_marginTop="15dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_descCompany" />
+
+                    <Button
+                        android:id="@+id/btn_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginHorizontal="15dp"
+                        android:text="Edit Profile"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:background="@drawable/btnshape"
+                        app:layout_constraintTop_toBottomOf="@id/tv_descCompany"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:background="@color/white"
+            android:fitsSystemWindows="true"
+            app:headerLayout="@layout/header"
+            app:menu="@menu/drawer_menu" />
+    </androidx.drawerlayout.widget.DrawerLayout>
+</layout>

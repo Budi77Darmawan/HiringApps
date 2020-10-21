@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomsheethome"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:background="@drawable/roundedfilter2">
+
+    <TextView
+        android:id="@+id/filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filter"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/job"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Job Skill"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filter" />
+
+    <TextView
+        android:id="@+id/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="5dp"
+        android:backgroundTint="@color/filter_background"
+        android:text="Android Developer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/job" />
+
+    <TextView
+        android:id="@+id/ios"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="5dp"
+        android:background="@drawable/btnfilter"
+        android:text="IOS Developer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/android" />
+
+    <TextView
+        android:id="@+id/web"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="5dp"
+        android:background="@drawable/btnfilter"
+        android:text="Web Developer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ios"/>
+
+    <TextView
+        android:id="@+id/btn_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingHorizontal="50dp"
+        android:paddingVertical="5dp"
+        android:text="S A V E"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/btnshape"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/web"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".project.DetailProjectActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/inc"
+                layout="@layout/toolbar" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="20dp">
+
+                <ImageView
+                    android:id="@+id/img_project"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/edtshape"
+                    android:padding="20dp"
+                    android:src="@drawable/imagenotavailable"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Project Name"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@id/img_project"
+                    app:layout_constraintTop_toBottomOf="@id/img_project" />
+
+                <TextView
+                    android:id="@+id/tv_projectName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textStyle="italic"
+                    app:layout_constraintStart_toStartOf="@id/img_project"
+                    app:layout_constraintTop_toBottomOf="@id/name" />
+
+                <TextView
+                    android:id="@+id/deadline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Deadline"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@id/img_project"
+                    app:layout_constraintTop_toBottomOf="@id/tv_projectName" />
+
+                <TextView
+                    android:id="@+id/tv_deadline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textStyle="italic"
+                    app:layout_constraintStart_toStartOf="@id/img_project"
+                    app:layout_constraintTop_toBottomOf="@id/deadline" />
+
+                <TextView
+                    android:id="@+id/desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Description"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@id/img_project"
+                    app:layout_constraintTop_toBottomOf="@id/tv_deadline" />
+
+                <TextView
+                    android:id="@+id/tv_desc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textStyle="italic"
+                    app:layout_constraintEnd_toEndOf="@id/img_project"
+                    app:layout_constraintStart_toStartOf="@id/img_project"
+                    app:layout_constraintTop_toBottomOf="@id/desc" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+</layout>
